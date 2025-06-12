@@ -1,68 +1,112 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url(https://use.fontawesome.com/releases/v6.1.2/css/all.css);
+
+
+:root {
+--bg-dark: #0f172a;
+--bg-medium: #1e293b;
+--text-light: #f1f5f9;
+--text-accent: #14b8a6;
+--shadow: rgba(0, 0, 0, 0.2);
+}
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Inter', sans-serif;
 }
-
+html {
+scroll-behavior: smooth;
+}
 body {
-  background: linear-gradient(135deg, #f0f4ff, #d3e0ff);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+background-color: var(--bg-dark);
+color: var(--text-light);
+line-height: 1.6;
 }
-
-.profile-container {
-  padding: 20px;
+header {
+position: fixed;
+width: 100%;
+background: var(--bg-medium);
+padding: 1rem 2rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+z-index: 999;
+box-shadow: 0 2px 4px var(--shadow);
+transition: background 0.3s ease-in-out;
 }
-
-.profile-card {
-  background-color: white;
-  border-radius: 20px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-  text-align: center;
-  padding: 30px 20px;
-  max-width: 350px;
-  margin: auto;
+header h1 {
+font-size: 1.5rem;
+font-weight: bold;
 }
-
-.profile-image {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 20px;
-  border: 3px solid #87a4ff;
+nav a {
+margin-left: 1rem;
+color: var(--text-light);
+text-decoration: none;
+transition: color 0.2s;
 }
-
-.name {
-  font-size: 24px;
-  font-weight: bold;
-  color: #2c3e50;
+nav a:hover {
+color: var(--text-accent);
 }
-
-.title {
-  font-size: 16px;
-  color: #7f8c8d;
-  margin: 10px 0;
+section {
+padding: 6rem 2rem;
 }
-
-.bio {
-  font-size: 14px;
-  color: #444;
-  margin-bottom: 20px;
+#hero {
+min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+background: linear-gradient(to right, #0f172a, #1e293b);
+text-align: center;
 }
-
-.social-links a {
-  display: inline-block;
-  margin: 0 10px;
-  color: #3498db;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
+#hero h2 {
+font-size: 3rem;
+animation: fadeSlide 2s ease-in-out forwards;
 }
-
-.social-links a:hover {
-  color: #1d6fa5;
+#hero p {
+font-size: 1.5rem;
+margin-top: 1rem;
+opacity: 0;
+animation: fadeSlide 2.5s ease-in-out forwards;
+animation-delay: 0.5s;
+}
+@keyframes fadeSlide {
+from {
+  transform: translateY(20px);
+  opacity: 0;
+}
+to {
+  transform: translateY(0);
+  opacity: 1;
+}
+}
+.container {
+max-width: 1100px;
+margin: 0 auto;
+}
+.project-card {
+background: var(--bg-medium);
+padding: 1.5rem;
+border-radius: 0.5rem;
+box-shadow: 0 4px 10px var(--shadow);
+transition: transform 0.3s, box-shadow 0.3s;
+}
+.project-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 20px var(--shadow);
+}
+.skills span {
+background: var(--text-accent);
+color: white;
+margin: 0.3rem;
+padding: 0.5rem 1rem;
+border-radius: 9999px;
+display: inline-block;
+font-size: 0.875rem;
+}
+footer {
+text-align: center;
+padding: 2rem;
+background: var(--bg-medium);
+color: #94a3b8;
 }

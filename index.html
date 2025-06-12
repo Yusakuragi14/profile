@@ -1,34 +1,95 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <link rel="stylesheet" href="style.css">
-    <title>Yu sakuragi-Wong profile page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yu sakuragi-Wong – Web Developer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Yu sakuragi-Wong profile">
-    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="container">
-      <div class="profile-card" id="introduction">
-        <img src="images/profile.jpg" alt="Photo of Yu" id="profile-pic">
-        <h1 class="name">Yu sakuragi-Wong</h1>
-        <p class="title">Programmer & Web Developer</p>
-        <p class="bio">I am a programmer who enjoys coding and dogs 🐕🐕</p>
-      </div>
+    <header>
+      <h1>Yu sakuragi-Wong</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
-      <div class="card">
-        <p>Welcome to check out my social-links❤️</p>
-        <ul class="social-links">
-          <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-          <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
-          <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-       </ul>
+    <section id="hero">
+      <div>
+        <h2>Hi, I'm Yu</h2>
+        <p>Web Developer • Problem Solver • Lifelong Learner</p>
       </div>
-    </div>
+    </section>
+
+    <section id="about" data-aos="fade-up">
+      <div class="container text-center">
+        <h2 class="text-3xl font-bold mb-4">About Me</h2>
+        <img src="images/profile.jpg" alt="Photo of Yu" id="profile-pic">
+        <p>
+          I'm a full-stack developer passionate about clean design, accessibility, and building impactful web apps.
+          Always learning, always growing.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects" data-aos="fade-up">
+      <div class="container">
+        <h2 class="text-3xl font-bold text-center mb-8">Projects</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+            <h3 class="text-xl font-semibold mb-2">Skill learning App</h3>
+            <p>Using AI to design your own specific learning paths.</p>
+            <a href="https://github.com/Papi-PF/SkillFundr.git" class="text-teal-400 block mt-2">GitHub Repo</a>
+          </div>
+          <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+            <h3 class="text-xl font-semibold mb-2">Vintage car hire website</h3>
+            <p>A platform for hiring vintage cars for special occations.</p>
+            <a href="https://github.com/DianaDiandra/vintage-car-hire.git" class="text-teal-400 block mt-2">GitHub Repo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" data-aos="fade-up">
+      <div class="container text-center">
+        <h2 class="text-3xl font-bold mb-6">Skills</h2>
+        <div class="skills">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>React</span>
+          <span>Node.js</span>
+          <span>Tailwind CSS</span>
+          <span>Git & GitHub</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" data-aos="fade-up">
+      <div class="container text-center">
+        <h2 class="text-3xl font-bold mb-4">Let's Connect</h2>
+        <p>Reach out for collaboration, freelance work or just to say hi!</p>
+        <p class="text-teal-400 mt-2">sakuragi.yu@gmail.com</p>
+        <div class="mt-4">
+          <a href="https://linkedin.com/in/yu-sakuragi" class="text-teal-400 mx-2">LinkedIn</a>
+          <a href="https://github.com/Yusakuragi14" class="text-teal-400 mx-2">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 Yu Sakuragi — Built with ❤️ using HTML, CSS & AOS</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true });
+    </script>
   </body>
 </html>
-
-<!-- - an image of yourself
-- a header and sub-header with your name and your job title (you can put programmer now 💻)
-- a description of yourself
-- a button
-- a list of your social links -->
