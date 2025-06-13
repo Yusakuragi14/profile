@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url(https://use.fontawesome.com/releases/v6.1.2/css/all.css);
 
 
@@ -60,16 +60,17 @@ background: linear-gradient(to right, #0f172a, #1e293b);
 text-align: center;
 }
 #hero h2 {
-font-size: 3rem;
-animation: fadeSlide 2s ease-in-out forwards;
+  font-size: 3rem;
+  animation: popIn 1s ease-in-out forwards;
 }
 #hero p {
-font-size: 1.5rem;
-margin-top: 1rem;
-opacity: 0;
-animation: fadeSlide 2.5s ease-in-out forwards;
-animation-delay: 0.5s;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  opacity: 0;
+  animation: popIn 1.2s ease-in-out forwards;
+  animation-delay: 0.3s;
 }
+
 @keyframes fadeSlide {
 from {
   transform: translateY(20px);
@@ -79,7 +80,17 @@ to {
   transform: translateY(0);
   opacity: 1;
 }
+@keyframes popIn {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
+
 .container {
 max-width: 1100px;
 margin: 0 auto;
@@ -91,19 +102,39 @@ border-radius: 0.5rem;
 box-shadow: 0 4px 10px var(--shadow);
 transition: transform 0.3s, box-shadow 0.3s;
 }
-.project-card:hover {
-transform: translateY(-5px);
-box-shadow: 0 10px 20px var(--shadow);
+.project-card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-weight: 500;
+  transition: transform 0.3s, color 0.3s;
 }
+.project-card a:hover {
+  transform: translateX(5px);
+  color: var(--text-accent);
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
 .skills span {
-background: var(--text-accent);
-color: white;
-margin: 0.3rem;
-padding: 0.5rem 1rem;
-border-radius: 9999px;
-display: inline-block;
-font-size: 0.875rem;
+  background: rgba(20, 184, 166, 0.15);
+  border: 1px solid var(--text-accent);
+  color: var(--text-accent);
+  font-weight: 500;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
+.skills span:hover {
+  background: var(--text-accent);
+  color: white;
+  transform: scale(1.05);
+}
+
 footer {
 text-align: center;
 padding: 2rem;
