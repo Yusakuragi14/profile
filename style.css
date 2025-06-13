@@ -72,14 +72,16 @@ text-align: center;
 }
 
 @keyframes fadeSlide {
-from {
-  transform: translateY(20px);
-  opacity: 0;
+    from {
+    transform: translateY(20px);
+    opacity: 0;
+    }
+    to {
+    transform: translateY(0);
+    opacity: 1;
+    }
 }
-to {
-  transform: translateY(0);
-  opacity: 1;
-}
+
 @keyframes popIn {
   0% {
     transform: scale(0.95);
@@ -89,6 +91,20 @@ to {
     transform: scale(1);
     opacity: 1;
   }
+}
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 3px solid var(--text-accent);
+  transition: transform 0.3s;
+}
+.avatar:hover {
+  transform: scale(1.05);
 }
 
 .container {
